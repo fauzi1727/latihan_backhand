@@ -36,6 +36,12 @@ if (process.env.NODE_ENV !== "production") {
 // Routes
 // ============================================================
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "welcome",
+  });
+});
+
 app.use("/api/v1/berat", beratRouter);
 
 app.get("/api/v1/info", (req, res) => {
